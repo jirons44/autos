@@ -4,6 +4,8 @@ package com.jihs.models;
 import org.hibernate.annotations.Table;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @javax.persistence.Table(name = "Clients")
@@ -15,12 +17,15 @@ public class Client {
     private String AddressLine2;
     private String City;
     private String StateCode;
+    private List<Vehicle> vehicles;
 
     public Client(String name) {
         this.name = name;
+
     }
 
     public Client() {
+        this.vehicles = new ArrayList<Vehicle>();
     }
 
 
@@ -84,5 +89,14 @@ public class Client {
 
     public void setStateCode(String stateCode) {
         StateCode = stateCode;
+    }
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "client")
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
+    public void setVehicles(List<Vehicle> vehicles) {
+        this.vehicles = vehicles;
     }
 }

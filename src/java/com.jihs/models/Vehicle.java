@@ -30,7 +30,6 @@ public class Vehicle {
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
@@ -40,7 +39,6 @@ public class Vehicle {
     public String getMake() {
         return make;
     }
-
     public void setMake(String make) {
         this.make = make;
     }
@@ -50,7 +48,6 @@ public class Vehicle {
     public String getModel() {
         return model;
     }
-
     public void setModel(String model) {
         this.model = model;
     }
@@ -60,7 +57,6 @@ public class Vehicle {
     public int getYear() {
         return year;
     }
-
     public void setYear(int year) {
         this.year = year;
     }
@@ -70,7 +66,6 @@ public class Vehicle {
     public int getMileage() {
         return mileage;
     }
-
     public void setMileage(int mileage) {
         this.mileage = mileage;
     }
@@ -80,18 +75,16 @@ public class Vehicle {
     public int getMilesDriven() {
         return milesDriven;
     }
-
     public void setMilesDriven(int milesDriven) {
         this.milesDriven = milesDriven;
     }
 
     @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
-    public Client getClient() {
+    public Client   getClient() {
         return client;
     }
-
-    public void setClient(Client client) {
+    public void     setClient(Client client) {
         this.client = client;
     }
 }

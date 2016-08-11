@@ -42,5 +42,23 @@ public class ClientTest {
 
     }
 
+    @Test
+    public void createFourNewVehicliesForJoe() throws Exception {
+//        Session session = Mysql.getSession();
+//        session.beginTransaction();
+//        Client c = session.get(Client.class, 1);
+//        c.getVehicles().add( new Vehicle("Ford", "Mustang", 2017, c) );
+//        c.getVehicles().add( new Vehicle("Toyota", "Prius C ", 2017, c) );
+//        c.getVehicles().add( new Vehicle("Toytoa", "Avalon", 2017, c) );
+//        c.getVehicles().add( new Vehicle("Volvo", "C750", 2017, c) );
+//
+//        //session.save(c);
+//        session.getTransaction().commit();
+//        session.close();
+//       // assertEquals(2017, c.getVehicles().get(0).getYear() );
+
+    }
+
+
 
 }
